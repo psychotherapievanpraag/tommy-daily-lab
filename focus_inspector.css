@@ -1,0 +1,31 @@
+.focus-controls {
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:6px;
+}
+.focus-controls button {
+  width:100%;
+  border:1px solid #ffffff1e;
+  color:inherit;
+  background:#ffffff08;
+  border-radius:12px;
+  padding:8px 6px;
+  cursor:pointer;
+  text-align:center;
+  font-size:11px;
+}
+.focus-controls button:hover { background:#ffffff10; }
+.focus-controls button.active { outline:2px solid #d7bd87; background:#30291d; }
+.contact-legend { line-height:1.8; }
+.contact-legend .dot {
+  display:inline-block;
+  width:7px;
+  height:7px;
+  border-radius:50%;
+  margin:0 3px 0 6px;
+  vertical-align:middle;
+}
+.contact-legend .dot.geometry { background:#73c7e8; }
+.contact-legend .dot.loaded { background:#6ee7a8; }
+.contact-legend .dot.roll { background:#f6ad55; }
+.contact-legend .dot.slide { background:#ff6b6b; }

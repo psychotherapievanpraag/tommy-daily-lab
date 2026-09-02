@@ -1,0 +1,117 @@
+.measurements-panel {
+  margin:12px 0;
+  border:1px solid #ffffff16;
+  border-radius:12px;
+  padding:10px;
+  background:#0d1217;
+}
+.measurements-panel > summary {
+  cursor:pointer;
+  font-size:12px;
+  font-weight:700;
+  letter-spacing:.04em;
+}
+.measurement-truth {
+  font-size:10px;
+  line-height:1.45;
+  opacity:.68;
+  margin:10px 0;
+}
+.measurement-truth.warning { color:#ffd19b; opacity:.95; }
+.measurement-inspector {
+  padding:9px 0;
+  border-top:1px solid #ffffff10;
+}
+.measurement-inspector label {
+  display:block;
+  margin-bottom:6px;
+  font-size:10px;
+  opacity:.65;
+}
+.measurement-inspector select {
+  width:100%;
+  border:1px solid #ffffff20;
+  border-radius:9px;
+  background:#0b1015;
+  color:inherit;
+  padding:7px 8px;
+  font:inherit;
+  font-size:11px;
+}
+.measurement-reading {
+  margin-top:6px;
+  display:grid;
+  gap:3px;
+}
+.measurement-reading div {
+  display:flex;
+  justify-content:space-between;
+  gap:10px;
+  font-size:9px;
+  line-height:1.35;
+}
+.measurement-reading span { opacity:.56; }
+.measurement-reading strong { text-align:right; overflow-wrap:anywhere; }
+.measurements-panel h3 {
+  margin:10px 0 6px;
+  font-size:10px;
+  text-transform:uppercase;
+  letter-spacing:.08em;
+  opacity:.65;
+}
+.metric-grid {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:6px;
+}
+.metric-card {
+  min-width:0;
+  border:1px solid #ffffff12;
+  border-radius:9px;
+  padding:7px;
+  background:#ffffff04;
+}
+.metric-card small,
+.metric-card strong,
+.metric-card span { display:block; }
+.metric-card small {
+  font-size:8px;
+  line-height:1.2;
+  text-transform:uppercase;
+  letter-spacing:.04em;
+  opacity:.58;
+}
+.metric-card strong {
+  margin-top:4px;
+  font-size:13px;
+}
+.metric-card span {
+  margin-top:4px;
+  font-size:7px;
+  line-height:1.3;
+  opacity:.42;
+  overflow-wrap:anywhere;
+}
+.measurement-empty {
+  grid-column:1 / -1;
+  margin:0;
+  border:1px dashed #ffffff18;
+  border-radius:9px;
+  padding:9px;
+  font-size:9px;
+  line-height:1.4;
+  opacity:.55;
+}
+.digit-contact-table { margin-top:8px; }
+.digit-contact-row {
+  display:grid;
+  grid-template-columns:1fr .8fr .9fr 1fr;
+  gap:5px;
+  padding:5px 0;
+  border-top:1px solid #ffffff0d;
+  font-size:8px;
+}
+.digit-contact-row span { opacity:.66; text-align:right; }
+@media (max-width: 900px) {
+  .metric-grid { grid-template-columns:1fr 1fr; }
+}

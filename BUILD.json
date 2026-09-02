@@ -1,0 +1,49 @@
+{
+  "schema_version": "1.1.0",
+  "mode": "recorded_build_read_only",
+  "read_only": true,
+  "source": {
+    "repository": "psychotherapievanpraag/tommy-robot-lab",
+    "branch": "main",
+    "commit": "898d2c2aa987342346caf81f7bf0dc169472cee7",
+    "generated_at": "2026-09-02T18:56:42.841316+00:00"
+  },
+  "development": {
+    "authority": {
+      "label": "Canonical Master",
+      "status": "INTEGRATED",
+      "evidence": "docs/master/TOMMY_MASTER.md"
+    },
+    "cognitive_observation": {
+      "label": "Cognitive observation",
+      "status": "OBS-G1 INTEGRATED",
+      "evidence": "runtime/core/cognitive_snapshot.py",
+      "note": "Read-only world/embodiment observation; no learning or control authority."
+    },
+    "visual_embodiment": {
+      "label": "Visual Embodiment V1",
+      "status": "INTEGRATED",
+      "evidence": "viewer/godot/scripts/main.gd",
+      "note": "Godot consumes canonical FK points/segments. This public page replays the same FK truth as a web projection."
+    },
+    "hand": {
+      "label": "Dexterous hand",
+      "status": "24-DOF RUNTIME",
+      "evidence": "packages/tommy_hand/",
+      "note": "Current runtime hand is visible through finger chains/contact measurements; explicit production 3D finger-bone rig remains a later visual gate."
+    },
+    "next_gate": {
+      "label": "Next visual gate",
+      "status": "V2 PLANNED",
+      "evidence": "docs/master/TOMMY_MASTER.md",
+      "note": "Explicit finger-bone rig + truthful hand close-up, without creating a second skeleton."
+    }
+  },
+  "truth_rules": [
+    "RECORDED_BUILD != LIVE_RUNTIME",
+    "ENGINE_VALUE != VALIDATED_HUMAN_VALUE",
+    "VISUAL_APPROXIMATION != ANATOMICAL_VALIDATION",
+    "COGNITIVE_OBSERVATION != CONTROL_AUTHORITY",
+    "PUBLIC_WEB_VIEWER = RECORDED PROJECTION OF CANONICAL 3D/FK STATE"
+  ]
+}
