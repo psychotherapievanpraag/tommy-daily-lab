@@ -101,6 +101,28 @@ function renderCognitive(cognitive) {
   truth.textContent = `${cognitive.source} · ${world.representation || 'world state'} · learner/teacher values remain absent until a truthful runtime source exists.`;
 }
 
+function renderJazz(jazz) {
+  const panel = document.getElementById('jazzPanel');
+  if (!jazz) {
+    panel.hidden = true;
+    return;
+  }
+  panel.hidden = false;
+  document.getElementById('jazzStatus').textContent = labelize(jazz.status || 'unavailable');
+  document.getElementById('jazzCandidate').textContent =
+    jazz.decision?.selected_candidate?.name || 'not selected';
+  document.getElementById('jazzProfileSource').textContent =
+    labelize(jazz.profile_provenance?.source || 'not supplied');
+  document.getElementById('jazzContactEvidence').textContent =
+    labelize(jazz.evidence_status?.contacts || 'unavailable');
+  document.getElementById('jazzGazeEvidence').textContent =
+    labelize(jazz.evidence_status?.gaze_direction || 'unavailable');
+  document.getElementById('jazzControl').textContent = jazz.control_authority || 'none';
+  const missing = Array.isArray(jazz.missing_evidence) ? ` Missing: ${jazz.missing_evidence.join(', ')}.` : '';
+  document.getElementById('jazzTruth').textContent =
+    `${jazz.truth_rule || 'REFERENCE_DECISION != MOTOR_COMMAND'}.${missing}`;
+}
+
 function updateLayerTruth() {
   const truth = viewer.layerTruth();
   document.getElementById('layerTruth').textContent = truth
@@ -118,6 +140,7 @@ function renderFrame() {
   window.renderTommyMeasurements?.(frame.measurements);
   renderState(frame.state);
   renderCognitive(frame.cognitive);
+  renderJazz(frame.jazz);
   updateLayerTruth();
 
   const frameCount = demo.frames.length;

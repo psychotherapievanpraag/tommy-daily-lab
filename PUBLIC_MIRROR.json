@@ -1,7 +1,7 @@
 {
   "mirror_schema_version": "1.0.0",
   "source_repository": "psychotherapievanpraag/tommy-robot-lab",
-  "source_commit": "898d2c2aa987342346caf81f7bf0dc169472cee7",
+  "source_commit": "788cc6e6724d323b48c40cb6a7c804f52f5babb2",
   "read_only": true,
   "runtime_control_available": false,
   "authority": "none",
