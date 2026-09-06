@@ -5,8 +5,8 @@
   "source": {
     "repository": "psychotherapievanpraag/tommy-robot-lab",
     "branch": "main",
-    "commit": "cbcf2e6ae1db0fa201769d4289c154e3ff54d151",
-    "generated_at": "2026-09-06T11:18:31.887704+00:00"
+    "commit": "4f5dd7eb5f1eb7400af798b1a759b4e30dfb81b7",
+    "generated_at": "2026-09-06T11:38:54.866618+00:00"
   },
   "development": {
     "authority": {
@@ -34,9 +34,15 @@
     },
     "dance_gate2_music": {
       "label": "Solo Jazz MusicMap conductor",
-      "status": "GATE2 ENGINEERING CANDIDATE",
+      "status": "GATE2 INTEGRATED",
       "evidence": "runtime/core/jazz_musicmap.py + runtime/core/jazz_music_conductor.py + skills/solo_jazz_gate1_music.json",
-      "note": "Validated MusicMap timing can request an approved tempo-adaptive Solo Jazz MotorOS phrase. Music/browser layers still have no joint-write authority. This does not yet prove full-song vocabulary or professional musicality."
+      "note": "Validated MusicMap timing requests approved tempo-adaptive Solo Jazz MotorOS phrases. Music/browser layers have no joint-write authority. Gate 2 is scheduling infrastructure, not full-song professional musicality."
+    },
+    "dance_gate3_vocabulary": {
+      "label": "Solo Jazz vocabulary",
+      "status": "GATE3 ENGINEERING BENCHMARK",
+      "evidence": "runtime/core/solo_jazz_gate3.py + skills/solo_jazz_box_gate3_music.json + runtime/core/jazz_music_conductor.py",
+      "note": "The approved vocabulary now contains two mechanically distinct MotorOS phrases with deterministic section-aware selection and canonical dance-neutral transitions. Engineering benchmark only; not full Solo Jazz vocabulary or professional choreography."
     },
     "hand": {
       "label": "Dexterous hand",
@@ -46,9 +52,9 @@
     },
     "next_gate": {
       "label": "Next Jazz gate",
-      "status": "VOCABULARY + TRANSITIONS PLANNED",
+      "status": "SUPPORT EVIDENCE + PHRASE CONTINUITY PLANNED",
       "evidence": "docs/dance/",
-      "note": "Finish Jazz v1 before appearance work: add approved phrase vocabulary, stable transitions and verified uploaded-song playback."
+      "note": "Finish Jazz v1 before appearance work: strengthen observed support/contact/balance evidence and improve phrase-to-phrase continuity before expanding musical interpretation further."
     }
   },
   "truth_rules": [
@@ -58,10 +64,12 @@
     "COGNITIVE_OBSERVATION != CONTROL_AUTHORITY",
     "PUBLIC_WEB_VIEWER = RECORDED PROJECTION OF CANONICAL 3D/FK STATE",
     "SOLO_JAZZ_GATE1_EXECUTION = ENGINEERING_REFERENCE, NOT PROFESSIONAL_STYLE_VALIDATION",
+    "SOLO_JAZZ_GATE3_VOCABULARY = ENGINEERING_BENCHMARK, NOT FULL_STYLE_VALIDATION",
     "MUSICMAP != AUDIO",
     "MUSIC_EVENT != JOINT_COMMAND",
     "JAZZ_CONDUCTOR_OUTPUT = MOTOROS_INTENT_ONLY",
     "MUSIC_DRIVEN_GATE2 = APPROVED_MOTOROS_PHRASE_SCHEDULING, NOT AUTONOMOUS_CHOREOGRAPHY",
+    "GATE3_TRANSITION = CANONICAL_DANCE_NEUTRAL_ANCHOR, NOT PROFESSIONAL_CROSS_PHRASE_FLOW",
     "REFERENCE_DECISION != MOTOR_COMMAND",
     "MISSING_EVIDENCE != SAFE_TO_INFER"
   ]
