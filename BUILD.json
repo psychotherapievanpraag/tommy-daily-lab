@@ -5,8 +5,8 @@
   "source": {
     "repository": "psychotherapievanpraag/tommy-robot-lab",
     "branch": "main",
-    "commit": "4f5dd7eb5f1eb7400af798b1a759b4e30dfb81b7",
-    "generated_at": "2026-09-06T11:38:54.866618+00:00"
+    "commit": "f3eb0a81341035099d0a5008a4cfa87bcaf018d5",
+    "generated_at": "2026-09-06T11:51:46.278036+00:00"
   },
   "development": {
     "authority": {
@@ -42,7 +42,13 @@
       "label": "Solo Jazz vocabulary",
       "status": "GATE3 ENGINEERING BENCHMARK",
       "evidence": "runtime/core/solo_jazz_gate3.py + skills/solo_jazz_box_gate3_music.json + runtime/core/jazz_music_conductor.py",
-      "note": "The approved vocabulary now contains two mechanically distinct MotorOS phrases with deterministic section-aware selection and canonical dance-neutral transitions. Engineering benchmark only; not full Solo Jazz vocabulary or professional choreography."
+      "note": "The approved vocabulary contains two mechanically distinct MotorOS phrases with deterministic section-aware selection and canonical dance-neutral transitions. Engineering benchmark only; not full Solo Jazz vocabulary or professional choreography."
+    },
+    "dance_gate4_support": {
+      "label": "Solo Jazz support evidence",
+      "status": "GATE4 ENGINEERING BENCHMARK",
+      "evidence": "runtime/core/jazz_support_observer.py + runtime/core/jazz_music_conductor.py",
+      "note": "Canonical FK foot proximity, contacted-foot slide proxy and controller joint-rate evidence now gate later phrase launches. These are engineering observations, not force-plate, friction or professional balance validation."
     },
     "hand": {
       "label": "Dexterous hand",
@@ -52,9 +58,9 @@
     },
     "next_gate": {
       "label": "Next Jazz gate",
-      "status": "SUPPORT EVIDENCE + PHRASE CONTINUITY PLANNED",
+      "status": "MUSICAL SEMANTICS PLANNED",
       "evidence": "docs/dance/",
-      "note": "Finish Jazz v1 before appearance work: strengthen observed support/contact/balance evidence and improve phrase-to-phrase continuity before expanding musical interpretation further."
+      "note": "Finish Jazz v1 before appearance work: next add bounded accents, breaks and swing/subdivision semantics only where MusicMap evidence supports them, then continue toward uploaded-song end-to-end verification."
     }
   },
   "truth_rules": [
@@ -65,11 +71,15 @@
     "PUBLIC_WEB_VIEWER = RECORDED PROJECTION OF CANONICAL 3D/FK STATE",
     "SOLO_JAZZ_GATE1_EXECUTION = ENGINEERING_REFERENCE, NOT PROFESSIONAL_STYLE_VALIDATION",
     "SOLO_JAZZ_GATE3_VOCABULARY = ENGINEERING_BENCHMARK, NOT FULL_STYLE_VALIDATION",
+    "SIMULATED_FK_CONTACT != PHYSICAL_CONTACT_SENSOR",
+    "FK_FOOT_SLIDE_PROXY != PHYSICAL_SLIP_MEASUREMENT",
+    "TRANSITION_READY != PROFESSIONAL_BALANCE_VALIDATION",
     "MUSICMAP != AUDIO",
     "MUSIC_EVENT != JOINT_COMMAND",
     "JAZZ_CONDUCTOR_OUTPUT = MOTOROS_INTENT_ONLY",
     "MUSIC_DRIVEN_GATE2 = APPROVED_MOTOROS_PHRASE_SCHEDULING, NOT AUTONOMOUS_CHOREOGRAPHY",
     "GATE3_TRANSITION = CANONICAL_DANCE_NEUTRAL_ANCHOR, NOT PROFESSIONAL_CROSS_PHRASE_FLOW",
+    "GATE4_TRANSITION = READ_ONLY_SUPPORT_EVIDENCE_GATE, NOT A JOINT CONTROLLER",
     "REFERENCE_DECISION != MOTOR_COMMAND",
     "MISSING_EVIDENCE != SAFE_TO_INFER"
   ]
