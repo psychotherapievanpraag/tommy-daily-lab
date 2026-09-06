@@ -5,8 +5,8 @@
   "source": {
     "repository": "psychotherapievanpraag/tommy-robot-lab",
     "branch": "main",
-    "commit": "f3eb0a81341035099d0a5008a4cfa87bcaf018d5",
-    "generated_at": "2026-09-06T11:51:46.278036+00:00"
+    "commit": "b79a962924089ad32bc4af8465b2668f06a12249",
+    "generated_at": "2026-09-06T12:22:03.254830+00:00"
   },
   "development": {
     "authority": {
@@ -48,7 +48,13 @@
       "label": "Solo Jazz support evidence",
       "status": "GATE4 ENGINEERING BENCHMARK",
       "evidence": "runtime/core/jazz_support_observer.py + runtime/core/jazz_music_conductor.py",
-      "note": "Canonical FK foot proximity, contacted-foot slide proxy and controller joint-rate evidence now gate later phrase launches. These are engineering observations, not force-plate, friction or professional balance validation."
+      "note": "Canonical FK foot proximity, contacted-foot slide proxy and controller joint-rate evidence gate later phrase launches. These are engineering observations, not force-plate, friction or professional balance validation."
+    },
+    "dance_gate5_semantics": {
+      "label": "Solo Jazz musical semantics",
+      "status": "GATE5 ENGINEERING BENCHMARK",
+      "evidence": "runtime/core/jazz_semantics.py + runtime/core/jazz_musicmap.py + runtime/core/jazz_music_conductor.py",
+      "note": "Explicit MusicMap accent, break and rhythm evidence can now modulate approved MotorOS phrase arguments. Missing or low-confidence swing evidence produces no swing warp. The Site demo uses synthetic labeled evidence; this is not proof of audio-derived musical understanding or professional Swing/Solo Jazz interpretation."
     },
     "hand": {
       "label": "Dexterous hand",
@@ -58,9 +64,9 @@
     },
     "next_gate": {
       "label": "Next Jazz gate",
-      "status": "MUSICAL SEMANTICS PLANNED",
+      "status": "VOCABULARY + END-TO-END SONG VERIFICATION PLANNED",
       "evidence": "docs/dance/",
-      "note": "Finish Jazz v1 before appearance work: next add bounded accents, breaks and swing/subdivision semantics only where MusicMap evidence supports them, then continue toward uploaded-song end-to-end verification."
+      "note": "Finish Jazz v1 before appearance work: expand the bounded phrase vocabulary only as needed, then verify uploaded-song -> MusicMap -> conductor -> MotorOS -> stable full-body playback end to end on Human Motion Core."
     }
   },
   "truth_rules": [
@@ -76,10 +82,16 @@
     "TRANSITION_READY != PROFESSIONAL_BALANCE_VALIDATION",
     "MUSICMAP != AUDIO",
     "MUSIC_EVENT != JOINT_COMMAND",
+    "MUSIC_SEMANTIC != JOINT_COMMAND",
+    "NO_SWING_EVIDENCE -> NO_SWING_WARP",
+    "ACCENT_GAIN = ENGINEERING_RESPONSE, NOT PROFESSIONAL_STYLE_TRUTH",
+    "BREAK_MASK = EXPLICIT_EVENT_RESPONSE, NOT INFERRED_SILENCE",
+    "SWING_WARP != PROFESSIONAL_SWING_VALIDATION",
     "JAZZ_CONDUCTOR_OUTPUT = MOTOROS_INTENT_ONLY",
     "MUSIC_DRIVEN_GATE2 = APPROVED_MOTOROS_PHRASE_SCHEDULING, NOT AUTONOMOUS_CHOREOGRAPHY",
     "GATE3_TRANSITION = CANONICAL_DANCE_NEUTRAL_ANCHOR, NOT PROFESSIONAL_CROSS_PHRASE_FLOW",
     "GATE4_TRANSITION = READ_ONLY_SUPPORT_EVIDENCE_GATE, NOT A JOINT CONTROLLER",
+    "GATE5_SITE_SEMANTICS = SYNTHETIC_LABELED_EVIDENCE, NOT AUDIO_DERIVED_PROOF",
     "REFERENCE_DECISION != MOTOR_COMMAND",
     "MISSING_EVIDENCE != SAFE_TO_INFER"
   ]
