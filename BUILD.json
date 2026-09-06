@@ -5,8 +5,8 @@
   "source": {
     "repository": "psychotherapievanpraag/tommy-robot-lab",
     "branch": "main",
-    "commit": "788cc6e6724d323b48c40cb6a7c804f52f5babb2",
-    "generated_at": "2026-09-05T22:45:29.621586+00:00"
+    "commit": "17a8a5624bd26a1c9efc1f47a67d903f8918a46b",
+    "generated_at": "2026-09-06T07:49:59.785920+00:00"
   },
   "development": {
     "authority": {
@@ -44,6 +44,8 @@
     "ENGINE_VALUE != VALIDATED_HUMAN_VALUE",
     "VISUAL_APPROXIMATION != ANATOMICAL_VALIDATION",
     "COGNITIVE_OBSERVATION != CONTROL_AUTHORITY",
-    "PUBLIC_WEB_VIEWER = RECORDED PROJECTION OF CANONICAL 3D/FK STATE"
+    "PUBLIC_WEB_VIEWER = RECORDED PROJECTION OF CANONICAL 3D/FK STATE",
+    "REFERENCE_DECISION != MOTOR_COMMAND",
+    "MISSING_EVIDENCE != SAFE_TO_INFER"
   ]
 }
