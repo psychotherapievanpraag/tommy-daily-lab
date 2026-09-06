@@ -5,8 +5,8 @@
   "source": {
     "repository": "psychotherapievanpraag/tommy-robot-lab",
     "branch": "main",
-    "commit": "e3cec06fced674b39867b1ad2cdedba2b2339e62",
-    "generated_at": "2026-09-06T12:50:08.823696+00:00"
+    "commit": "a2e0353ff7aaa4c44c8b95880702861a741ae757",
+    "generated_at": "2026-09-06T16:44:03.373567+00:00"
   },
   "development": {
     "authority": {
@@ -48,7 +48,7 @@
       "label": "Solo Jazz support evidence",
       "status": "GATE4 ENGINEERING BENCHMARK",
       "evidence": "runtime/core/jazz_support_observer.py + runtime/core/jazz_music_conductor.py",
-      "note": "Canonical FK foot proximity, contacted-foot slide proxy and controller joint-rate evidence gate later phrase launches. Engineering observations, not force-plate/friction/professional balance validation."
+      "note": "Canonical FK foot proximity, contacted-foot slide proxy and canonical body-q finite-difference rate evidence gate later phrase launches. Engineering observations, not force-plate/friction/physiological-rate/professional balance validation."
     },
     "dance_gate5_semantics": {
       "label": "Solo Jazz musical semantics",
@@ -62,6 +62,12 @@
       "evidence": "runtime/core/solo_jazz_gate6.py + skills/solo_jazz_kick_gate6_music.json + skills/solo_jazz_twist_gate6_music.json + runtime/core/jazz_music_conductor.py",
       "note": "Approved MotorOS vocabulary now contains four mechanically distinct engineering phrase families: pulse, directional box, kick-step and twist-step. Kick/twist use the current anchored-pelvis kinematic body; this is not world-space locomotion, professional named-step validation or autonomous improvisation."
     },
+    "dance_gate7_audio": {
+      "label": "Solo Jazz local-audio transport",
+      "status": "GATE7 LOCAL RUNTIME BENCHMARK",
+      "evidence": "runtime/core/jazz_audio_analysis.py + apps/browser_home/server.py + apps/browser_home/static/app.js + runtime/core/motor_os.py",
+      "note": "Local integer PCM WAV can be analyzed offline into evidence-bounded tempo + beat origin + MusicMap, then HTML audio.currentTime clocks only reviewed external-music MotorOS skills. Pause freezes transport-driven motion; delayed Gate-4 release remains anchored to the scheduled eight-count boundary. This recorded Site bundle reports the capability but does not itself expose the live upload endpoint."
+    },
     "hand": {
       "label": "Dexterous hand",
       "status": "24-DOF RUNTIME",
@@ -70,9 +76,9 @@
     },
     "next_gate": {
       "label": "Next Jazz gate",
-      "status": "UPLOADED-SONG END-TO-END VERIFICATION PLANNED",
-      "evidence": "docs/dance/",
-      "note": "Jazz v1 now has bounded four-phrase coverage. Before appearance work, verify uploaded/local audio -> analysis/MusicMap -> explicit semantics -> four-skill selection -> Gate-4 readiness -> MotorOS -> stable full-body playback on the exact Human Motion Core Site projection."
+      "status": "EXACT HUMAN MOTION CORE SITE VERIFICATION PENDING",
+      "evidence": "docs/site/CHATGPT_SITE_SYNC.md",
+      "note": "Gate 7 closes the canonical local WAV -> analysis -> MusicMap -> audio transport -> Gate-4 readiness -> approved MotorOS path. Next verify/refresh the exact Human Motion Core Site projection and fix only rendering-integrity defects that block truthful Jazz verification; do not start the full appearance engine yet."
     }
   },
   "truth_rules": [
@@ -88,6 +94,7 @@
     "ROTATIONAL_INTENT != MEASURED_FOOT_PIVOT_FORCE",
     "SIMULATED_FK_CONTACT != PHYSICAL_CONTACT_SENSOR",
     "FK_FOOT_SLIDE_PROXY != PHYSICAL_SLIP_MEASUREMENT",
+    "CANONICAL_Q_FINITE_DIFFERENCE != PHYSIOLOGICAL_JOINT_VELOCITY",
     "TRANSITION_READY != PROFESSIONAL_BALANCE_VALIDATION",
     "MUSICMAP != AUDIO",
     "MUSIC_EVENT != JOINT_COMMAND",
@@ -101,6 +108,14 @@
     "GATE3_TRANSITION = CANONICAL_DANCE_NEUTRAL_ANCHOR, NOT PROFESSIONAL_CROSS_PHRASE_FLOW",
     "GATE4_TRANSITION = READ_ONLY_SUPPORT_EVIDENCE_GATE, NOT A JOINT CONTROLLER",
     "GATE5_SITE_SEMANTICS = SYNTHETIC_LABELED_EVIDENCE, NOT AUDIO_DERIVED_PROOF",
+    "LOCAL_AUDIO_ANALYSIS != PROFESSIONAL_MUSIC_INFORMATION_RETRIEVAL",
+    "ESTIMATED_TEMPO != GROUND_TRUTH_TEMPO",
+    "ESTIMATED_BEAT_ORIGIN != VERIFIED_DOWNBEAT",
+    "AUDIO_ONSET != MUSICAL_ACCENT",
+    "ASSUMED_4_4_METER != DETECTED_METER",
+    "EXTERNAL_MUSIC_TRANSPORT = REVIEWED_MOTOROS_CLOCK_ONLY",
+    "AUDIO_TRANSPORT_CLOCK != JOINT_COMMAND",
+    "RECORDED_SITE_BUNDLE != LIVE_LOCAL_AUDIO_UPLOAD_RUNTIME",
     "REFERENCE_DECISION != MOTOR_COMMAND",
     "MISSING_EVIDENCE != SAFE_TO_INFER"
   ]
